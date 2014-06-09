@@ -3,12 +3,15 @@ import javax.swing.*;
 
 public class BounceBallApp extends JApplet {
   public BounceBallApp() {
-    add(new BallControl());
+    Ball b = new Ball();
+	  BallControl bc = new BallControl(); 
+	  add(b);  
+	  add(bc);
   }
 
   public static void main(String[] args) {
-    BounceBallApp applet = new BounceBallApp();
-    JFrame frame = new JFrame();
+
+    JFrame frame = new BounceBallApp();
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setTitle("BounceBallApp");
     frame.add(applet, BorderLayout.CENTER);
